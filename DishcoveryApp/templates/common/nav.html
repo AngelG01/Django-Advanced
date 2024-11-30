@@ -1,0 +1,20 @@
+{% load static %}
+
+<!-- Navigation Bar -->
+<nav>
+        <div class="logo">
+            <a href="/">Dishcovery</a>
+        </div>
+        <ul class="nav-links">
+            <li><a href="/">Home</a></li>
+            <li><a href="/DishcoveryApp/recipes">Browse Recipes</a></li>
+            {% if user.is_authenticated %}
+                <li><a href="/add-recipe">Add a Recipe</a></li>
+                <li><a href="/profile">Profile</a></li>
+                <li><a href="/my-recipes">My Recipes</a></li>
+                <li><a href="/logout">Log Out</a></li>
+            {% else %}
+                <li><a href="/login">Log In</a></li>
+            {% endif %}
+        </ul>
+    </nav>

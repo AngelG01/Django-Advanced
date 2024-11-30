@@ -1,0 +1,25 @@
+{% extends 'common/base.html' %}
+{% load static %}
+
+{% block content %}
+    <!-- Main Content -->
+    <div class="hero">
+        <h1>Welcome to Dishcovery</h1>
+        <p>Explore, Share, and Discover Delicious Recipes</p>
+    </div>
+
+    <!-- Recipes List -->
+    <div class="recipe-list">
+        {% if recipes %}
+            <ul>
+                {% for recipe in recipes %}
+                    <li>
+                        <a href="{% url 'recipe_detail' recipe.id %}">{{ recipe.title }}</a>
+                    </li>
+                {% endfor %}
+            </ul>
+        {% else %}
+            <p>{{ empty_message }}</p>
+        {% endif %}
+    </div>
+{% endblock %}
