@@ -38,6 +38,7 @@ nav .nav-links {
     list-style-type: none;
     display: flex;
     gap: 20px;
+    align-items: center; /* Ensures alignment of links and logout button */
 }
 
 nav .nav-links li a {
@@ -50,6 +51,29 @@ nav .nav-links li a {
 }
 
 nav .nav-links li a:hover {
+    background-color: #0b0c10;
+    color: #45a29e;
+}
+
+/* Logout Button */
+nav form {
+    margin: 0;
+    display: inline; /* Inline form to keep it within navbar */
+}
+
+nav form button {
+    background-color: transparent;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 500;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+nav form button:hover {
     background-color: #0b0c10;
     color: #45a29e;
 }
@@ -79,21 +103,47 @@ nav .nav-links li a:hover {
     margin-bottom: 30px;
 }
 
-.hero .btn {
-    display: inline-block;
-    background-color: #0b0c10;
-    color: #fff;
-    padding: 12px 30px;
-    border-radius: 5px;
-    font-size: 18px;
-    font-weight: 600;
-    text-transform: uppercase;
-    transition: background-color 0.3s ease;
+/* Recipe List */
+.recipe-list ul {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+    display: grid;
+    gap: 10px;
 }
 
-.hero .btn:hover {
-    background-color: #45a29e;
-    color: #0b0c10;
+.recipe-list ul li {
+    background-color: #e6e6e6;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.recipe-list ul li a {
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 500;
+    color: #333;
+}
+
+.recipe-list ul li a:hover {
+    color: #45a29e;
+}
+
+/* Empty Message */
+.recipe-list p {
+    font-size: 24px;
+    font-weight: 600;
+    color: #333;
+    background-color: #e6e6e6;
+    padding: 30px;
+    margin-top: 40px;
+    border-radius: 12px;
+    text-align: center;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
 
 /* Footer */
@@ -102,7 +152,6 @@ footer {
     padding: 30px 20px;
     background-color: #333;
     color: #fff;
-    position: relative;
 }
 
 footer a {
@@ -115,7 +164,7 @@ footer a:hover {
     text-decoration: underline;
 }
 
-/* Media Queries for Responsiveness */
+/* Media Queries */
 @media (max-width: 768px) {
     nav .nav-links {
         flex-direction: column;
@@ -135,52 +184,7 @@ footer a:hover {
         font-size: 18px;
     }
 
-    .hero .btn {
-        font-size: 16px;
-        padding: 10px 25px;
+    .recipe-list ul {
+        gap: 15px;
     }
-}
-
-@media (max-width: 480px) {
-    nav {
-        padding: 10px 15px;
-    }
-
-    nav .logo a {
-        font-size: 22px;
-    }
-
-    nav .nav-links li a {
-        font-size: 14px;
-    }
-
-    .hero h1 {
-        font-size: 30px;
-    }
-
-    .hero p {
-        font-size: 16px;
-    }
-
-    .hero .btn {
-        font-size: 14px;
-        padding: 8px 20px;
-    }
-}
-
-/* Empty Message */
-.recipe-list p {
-    font-size: 24px;
-    font-weight: 600;
-    color: #333;
-    background-color: #e6e6e6;
-    padding: 30px;
-    margin-top: 40px;
-    border-radius: 12px;
-    text-align: center;
-    max-width: 700px;
-    margin-left: auto;
-    margin-right: auto;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-    font-family: 'Roboto', sans-serif;
 }
