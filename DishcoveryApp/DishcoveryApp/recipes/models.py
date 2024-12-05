@@ -9,7 +9,7 @@ class Recipe(models.Model):
     title = models.CharField(max_length=255)
     ingredients = models.TextField()
     instructions = models.TextField()
-    image = models.ImageField(upload_to='recipes/', blank=True, null=True)
+    image = models.ImageField(upload_to='recipe_images/', blank=True, null=True)
     author = models.ForeignKey(to=UserModel, on_delete=models.CASCADE,
                                related_name='recipes')
 

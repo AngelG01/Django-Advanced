@@ -9,7 +9,7 @@
 
         {% if request.user.is_authenticated %}
             <li><a href="{% url 'home-page' %}">Home</a></li>
-            <li><a href="/add-recipe">Add a Recipe</a></li>
+            <li><a href="{% url 'add-recipe' %}">Add a Recipe</a></li>
             <li><a href="/profile">Profile</a></li>
             <li><a href="/my-recipes">My Recipes</a></li>
             <li>
